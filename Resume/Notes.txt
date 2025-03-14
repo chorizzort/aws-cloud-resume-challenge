@@ -1,0 +1,13 @@
+RESUME CLOUD CHALLENGE NOTES
+
+- deploy my website on s3 buckets. 
+- using cloudfront to redirect url to s3 bucket. 
+- buy domain name from namecheap.
+- use route 53 to connect routing to cloudfront 
+- url -> route53 -> cloudtfront -> s3
+- there is complication occur when setting up url on namecheap and route53
+- create view counter in dynamodb 
+- use lambda function as API to communicate with dynamoDB
+- create javascript to display the view counter
+- having issue that the lambda function cannot access the dynamoDB. to solve this I need to allow permission for the lambda function to actually able to communicate with the dynamoDB
+- 
