@@ -12,3 +12,4 @@ RESUME CLOUD CHALLENGE NOTES
 - having issue that the lambda function cannot access the dynamoDB. to solve this I need to allow permission for the lambda function to actually able to communicate with the dynamoDB
 - create a new repo in github 
 - commit to github 
+- create iam user for admin
