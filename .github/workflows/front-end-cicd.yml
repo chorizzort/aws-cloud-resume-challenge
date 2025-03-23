@@ -9,6 +9,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps: 
+
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Install Dependencies
+      run: npm install  # Change this based on your package manager
+
+    - name: Build Project
+      run: npm run build
+
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master
       with:
@@ -17,5 +27,5 @@ jobs:
       AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY_ID: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
-      AWS_REGION: 'ap-southeast-1'
+      AWS_REGION: 'ap-southeast-5'
       SOURCE_DIR: 'Resume'
