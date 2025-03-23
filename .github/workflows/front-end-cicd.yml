@@ -9,16 +9,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps: 
-
-    - name: Checkout Repository
-      uses: actions/checkout@v3
-
-    - name: Install Dependencies
-      run: npm install  # Change this based on your package manager
-
-    - name: Build Project
-      run: npm run build
-
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master
       with:
