@@ -13,3 +13,5 @@ RESUME CLOUD CHALLENGE NOTES
 - create a new repo in github 
 - commit to github 
 - create iam user for admin
+- create CI/CD pipeline for front end using .yml
+- 
