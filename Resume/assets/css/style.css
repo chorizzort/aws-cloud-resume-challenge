@@ -262,6 +262,7 @@
     font-weight: 500;
     font-size: 1.3em;
     line-height: 1.4em;
+    
 }
 
 .home_project_header_upperline {
@@ -284,6 +285,8 @@
     margin-bottom: 10px;
     font-weight: 400;
     text-transform: uppercase;
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
 }
 
 .home_footer_container {
