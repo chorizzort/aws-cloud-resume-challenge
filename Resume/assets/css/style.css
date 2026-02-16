@@ -259,7 +259,7 @@
 .home_project_header {
     position: relative;
     margin: 0;
-    font-weight: 500;
+    font-weight: 1000;
     font-size: 1.3em;
     line-height: 1.4em;
     
@@ -287,6 +287,34 @@
     text-transform: uppercase;
     font-family: Inter, sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+.home_project_description_container {
+    width: 70%
+}
+
+.home_project_description {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -.003em;
+    z-index: 1;
+    margin: 0 0 20px 0;
+
+}
+
+.home_project_link_container {
+    display: inline-flex;
+    justify-content: center;
+    gap: 4px;
+    padding-right: 24px;
+}
+
+.home_project_link {
+    text-transform: uppercase;
+    font-size: .65rem;
+    letter-spacing: .75px;
 }
 
 .home_footer_container {
