@@ -26,11 +26,10 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - uses: chetan/invalidate-cloudfront-action@master
-      with:
-        distribution-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-        paths: "/*"
       env:
-        CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+        PATH: "/*"
+        DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS-REGION: "ap-southeast-5"
         
