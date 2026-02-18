@@ -24,8 +24,7 @@ jobs:
     needs: deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: chetan/invalidate-cloudfront-action@master
+    - uses: chetan/invalidate-cloudfront-action@v2
       env:
         PATH: "/*"
         DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
