@@ -96,9 +96,9 @@ To automate deployment:
 * Created a CI/CD pipeline using a .yml workflow file.
 * Configured GitHub Actions to:
 
-* * Automatically deploy updated frontend files to S3 on push
-* * Maintain consistent and automated deployment workflow
-* * This eliminates manual uploads and ensures continuous delivery.
+    * Automatically deploy updated frontend files to S3 on push
+    * Maintain consistent and automated deployment workflow
+    * This eliminates manual uploads and ensures continuous delivery.
 
 8. IAM & Security Management
 
