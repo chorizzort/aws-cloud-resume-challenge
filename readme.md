@@ -25,14 +25,13 @@ Architecture & Implementation
 * Managed DNS using Amazon Route 53.
 * Created DNS records to point the domain to the CloudFront distribution.
 
-Flow:
-
-URL → Route 53 → CloudFront → S3
+* Flow:
+    * URL → Route 53 → CloudFront → S3
 
 Challenge faced:
 * There was a complication during DNS configuration between Namecheap and Route 53 (nameserver setup and propagation delay).
-This was resolved by:
 
+This was resolved by:
 * Updating Namecheap nameservers to Route 53
 * Verifying hosted zone records
 * Waiting for proper DNS propagation
@@ -57,24 +56,18 @@ AWS Lambda
 
 IAM Permission Issue (Key Learning)
 
-Initially, the Lambda function could not access DynamoDB due to insufficient permissions.
-
+* Initially, the Lambda function could not access DynamoDB due to insufficient permissions.
 Root Cause:
-The Lambda execution role did not have required IAM policies.
+* The Lambda execution role did not have required IAM policies.
 
 Solution:
+* Attached appropriate IAM policies allowing:
+    * dynamodb:GetItem
+    * dynamodb:UpdateItem
+    * dynamodb:PutItem
+    * Followed principle of least privilege.
 
-Attached appropriate IAM policies allowing:
-
-dynamodb:GetItem
-
-dynamodb:UpdateItem
-
-dynamodb:PutItem
-
-Followed principle of least privilege.
-
-This improved my understanding of IAM roles and service-to-service authorization in AWS.
+* This improved my understanding of IAM roles and service-to-service authorization in AWS.
 
 5. Frontend & API Integration
 
@@ -95,7 +88,6 @@ To automate deployment:
 
 * Created a CI/CD pipeline using a .yml workflow file.
 * Configured GitHub Actions to:
-
     * Automatically deploy updated frontend files to S3 on push
     * Maintain consistent and automated deployment workflow
     * This eliminates manual uploads and ensures continuous delivery.
